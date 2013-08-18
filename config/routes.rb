@@ -1,4 +1,7 @@
 Recallfinder::Application.routes.draw do
+  resources :signature_collection_locations
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

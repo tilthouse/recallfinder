@@ -1,0 +1,39 @@
+<h1>Listing signature_collection_locations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Notes</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @signature_collection_locations.each do |signature_collection_location| %>
+  <tr>
+    <td><%= signature_collection_location.name %></td>
+    <td><%= signature_collection_location.address1 %></td>
+    <td><%= signature_collection_location.address2 %></td>
+    <td><%= signature_collection_location.city %></td>
+    <td><%= signature_collection_location.state %></td>
+    <td><%= signature_collection_location.zip %></td>
+    <td><%= signature_collection_location.notes %></td>
+    <td><%= signature_collection_location.latitude %></td>
+    <td><%= signature_collection_location.longitude %></td>
+    <td><%= link_to 'Show', signature_collection_location %></td>
+    <td><%= link_to 'Edit', edit_signature_collection_location_path(signature_collection_location) %></td>
+    <td><%= link_to 'Destroy', signature_collection_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Signature collection location', new_signature_collection_location_path %>
