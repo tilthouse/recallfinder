@@ -1,3 +1,9 @@
-// Place all the styles related to the LocationSearch controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import '_mixins';
+
+.signature_collection_location_info {
+  @include rounded(5px);
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border: solid 1px;
+  padding: 1em;
+}

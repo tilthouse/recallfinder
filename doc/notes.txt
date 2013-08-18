@@ -1,0 +1,17 @@
+Signature Collection Locations
+
+Name
+Phone
+Email
+Location Type: Home, Work, Public Place
+Location Name
+Location Address....
+Availablility: One Time, Regularly
+ ->  One Time: Date (limited to now to 26 Sep), Start & End times
+ ->  Regularly: Days of Week, Start & End times, Availability Limitations (text field)
+Other notes
+"Already have petitions & am trained" checkbox
+Online/offline flag
+IP Address
+
+Set to be online if "Already have petitions & am trained" checked

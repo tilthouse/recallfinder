@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Recallfinder</title>
+  <title>Recall Bob Filner</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" src=<%= google_maps_script_src %>></script>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <%= yield %>
-  <%- if content_for? :js_footer -%>
-    <script type="text/javascript">
-      <%= yield :js_footer %>
-    </script>
-  <%- end -%>
+  <div id="header">
+    <span id="main_text">Recall Bob Filner</span>
+  </div>
+  <div id="content">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+    <%- if content_for? :js_footer -%>
+      <script type="text/javascript">
+        <%= yield :js_footer %>
+      </script>
+    <%- end -%>
+  </div>
 </body>
 </html>

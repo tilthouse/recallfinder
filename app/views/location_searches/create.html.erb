@@ -3,15 +3,15 @@
 <div id="map-canvas" style="width: 100%; height: 350px;"></div>
 
 <% @signature_collection_locations.each do |signature_collection_location| %>
-    <p>
-      <%= signature_collection_location.name %>
-      <%= signature_collection_location.address1 %>
-      <%= signature_collection_location.address2 %>
-      <%= signature_collection_location.city %>
-      <%= signature_collection_location.state %>
-      <%= signature_collection_location.zip %>
-      <%= signature_collection_location.notes %>
-    </p>
+    <div class='signature_collection_location_info'>
+        <div class='name line'><%= signature_collection_location.name %></div>
+        <div class='address1 line'><%= signature_collection_location.address1 %></div>
+        <div class='address2 line'> <%= signature_collection_location.address2 %></div>
+        <div class='city line'><%= signature_collection_location.city %></div>
+        <div class='state line'><%= signature_collection_location.state %></div>
+        <div class='zip line'><%= signature_collection_location.zip %></div>
+        <div class='notes line'><%= signature_collection_location.notes %></div>
+    </div>
 <% end %>
 
 <%= content_for :js_footer do %>
