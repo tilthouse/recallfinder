@@ -10,6 +10,7 @@ class SignatureCollectionLocation < ActiveRecord::Base
     full_address += " #{city},"
     full_address += " #{state}"
     full_address += " #{zip}"
+    full_address
   end
 
 

@@ -1,0 +1,10 @@
+<h1>Where Can I Sign The Recall Petition?</h1>
+<%= simple_form_for @location_search do |f| %>
+    <%= f.input :address1 %>
+    <%= f.input :address2 %>
+    <%= f.input :city %>
+    <%= f.input :state %>
+    <%= f.input :zip %>
+
+    <%= f.submit %>
+<% end %>

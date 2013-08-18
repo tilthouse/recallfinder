@@ -1,0 +1,12 @@
+<h1>Your Nearest Recall Signature Collection Locations Are:</h1>
+<% @signature_collection_locations.each do |signature_collection_location| %>
+    <p>
+      <%= signature_collection_location.name %>
+      <%= signature_collection_location.address1 %>
+      <%= signature_collection_location.address2 %>
+      <%= signature_collection_location.city %>
+      <%= signature_collection_location.state %>
+      <%= signature_collection_location.zip %>
+      <%= signature_collection_location.notes %>
+    </p>
+<% end %>
