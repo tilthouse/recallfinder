@@ -5,10 +5,16 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript" src=<%= google_maps_script_src %>></script>
 </head>
 <body>
 
 <%= yield %>
 
+<%- if content_for? :js_footer -%>
+  <script type="text/javascript">
+    <%= yield :js_footer %>
+  </script>
+<%- end -%>
 </body>
 </html>

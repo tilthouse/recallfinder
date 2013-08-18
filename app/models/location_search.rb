@@ -16,7 +16,7 @@ class LocationSearch
   end
 
   def find_by_address(address)
-    find_by_coordinates(Geocoder.coordinates(address))
+    find_by_coordinates(coordinates)
   end
 
   def find_by_coordinates(coords)
@@ -30,5 +30,9 @@ class LocationSearch
     full_address += " #{state}"
     full_address += " #{zip}"
     full_address
+  end
+
+  def coordinates
+    @coords ||= Geocoder.coordinates(address)
   end
 end
