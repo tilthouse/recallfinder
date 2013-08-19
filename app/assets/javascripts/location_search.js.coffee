@@ -16,8 +16,13 @@ $ ->
   center_marker = new google.maps.Marker(
     position: centerLatLng
     map: map
-    title: "Your search location"
+    title: "Your search location",
+    info: new google.maps.InfoWindow({
+      content: 'Your search location'
+    })
   )
+  google.maps.event.addListener center_marker, 'click', ->
+    center_marker.info.open(map, center_marker)
   console.log center_marker
   markers = gon.signature_collection_locations.map (location) ->
     marker = new google.maps.Marker(
