@@ -7,9 +7,7 @@
         <div class='venue_name line'><%= signature_collection_location.venue_name %></div>
         <div class='address1 line'><%= signature_collection_location.address1 %></div>
         <div class='address2 line'> <%= signature_collection_location.address2 %></div>
-        <div class='city line'><%= signature_collection_location.city %></div>
-        <div class='state line'><%= signature_collection_location.state %></div>
-        <div class='zip line'><%= signature_collection_location.zip %></div>
+        <div class='city state zip line'><%= "#{signature_collection_location.city}, #{signature_collection_location.state} #{signature_collection_location.zip}" %></div>
         <div class='notes line'><%= signature_collection_location.notes %></div>
         <div class='distance line'>Distance: <%= number_with_precision(signature_collection_location.distance, :precision => 2) %> mi</div>
     </div>
