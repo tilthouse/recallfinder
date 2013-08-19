@@ -6,12 +6,12 @@
 </p>
 
 <p>
-  <b>Address1:</b>
+  <b>Address:</b>
   <%= @signature_collection_location.address1 %>
 </p>
 
 <p>
-  <b>Address2:</b>
+  <b>Address (cont.):</b>
   <%= @signature_collection_location.address2 %>
 </p>
 
@@ -35,16 +35,4 @@
   <%= @signature_collection_location.notes %>
 </p>
 
-<p>
-  <b>Latitude:</b>
-  <%= @signature_collection_location.latitude %>
-</p>
-
-<p>
-  <b>Longitude:</b>
-  <%= @signature_collection_location.longitude %>
-</p>
-
-
-<%= link_to 'Edit', edit_signature_collection_location_path(@signature_collection_location) %> |
 <%= link_to 'Back', signature_collection_locations_path %>

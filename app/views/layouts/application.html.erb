@@ -16,11 +16,6 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
-    <%- if content_for? :js_footer -%>
-      <script type="text/javascript">
-        <%= yield :js_footer %>
-      </script>
-    <%- end -%>
   </div>
 </body>
 </html>

@@ -1,10 +1,12 @@
 class SignatureCollectionLocation < ActiveRecord::Base
   attr_accessible :address1, :address2, :city, :latitude, :longitude,
                   :name, :notes, :state, :zip, :phone, :venue_name,
-                  :ready, :venue_type, :active, :ip_address
+                  :ready, :venue_type, :active
 
   geocoded_by :address
   after_validation :geocode, :if => :address_changed?
+
+  validates_presence_of :name, :venue_name, :address1, :city, :state, :phone
 
   def address
     full_address = address1

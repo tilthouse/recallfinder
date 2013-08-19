@@ -41,6 +41,7 @@ class SignatureCollectionLocationsController < ApplicationController
   # POST /signature_collection_locations.json
   def create
     @signature_collection_location = SignatureCollectionLocation.new(params[:signature_collection_location])
+    @signature_collection_location.created_by_ip_address = request.remote_ip
     @signature_collection_location.active = true if @signature_collection_location.ready
 
     respond_to do |format|
