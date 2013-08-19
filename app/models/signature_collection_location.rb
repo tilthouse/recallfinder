@@ -8,6 +8,8 @@ class SignatureCollectionLocation < ActiveRecord::Base
 
   validates_presence_of :name, :venue_name, :address1, :city, :state, :phone
 
+  scope :displayable, -> { where(active: true, ready: true) }
+
   def address
     full_address = address1
     full_address += " #{address2}" if address2.present?

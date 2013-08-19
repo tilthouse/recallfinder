@@ -23,11 +23,12 @@ $ ->
     center_marker.info.open(map, center_marker)
 
   markers = gon.signature_collection_locations.map (location) ->
-    content = location.venue_name
-    content += "<br/>#{location.address1}"
+    content = ''
+    content += location.venue_name if location.venue_name
+    content += "<br/>#{location.address1}" if location.address1
     content += "<br/>#{location.address2}" if location.address2
     content += "<br/>#{location.city}, #{location.state} #{location.zip}"
-    content += "<br/>#{location.phone}"
+    content += "<br/>#{location.phone}" if location.phone
     marker = new google.maps.Marker(
       position: new google.maps.LatLng(location.latitude, location.longitude),
       map: map

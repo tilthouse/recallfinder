@@ -32,11 +32,6 @@ class SignatureCollectionLocationsController < ApplicationController
     end
   end
 
-  # GET /signature_collection_locations/1/edit
-  #def edit
-  #  @signature_collection_location = SignatureCollectionLocation.find(params[:id])
-  #end
-
   # POST /signature_collection_locations
   # POST /signature_collection_locations.json
   def create

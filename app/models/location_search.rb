@@ -20,7 +20,7 @@ class LocationSearch
   end
 
   def find_by_coordinates(coords)
-    SignatureCollectionLocation.near(coords, 10)
+    SignatureCollectionLocation.near(coords, 25, :order => :distance).limit(5)
   end
 
   def address

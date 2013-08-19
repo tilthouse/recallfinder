@@ -28,12 +28,10 @@
     <td><%= signature_collection_location.latitude %></td>
     <td><%= signature_collection_location.longitude %></td>
     <td><%= link_to 'Show', signature_collection_location %></td>
-    <td><%= link_to 'Edit', edit_signature_collection_location_path(signature_collection_location) %></td>
-    <td><%= link_to 'Destroy', signature_collection_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Signature collection location', new_signature_collection_location_path %>
+<%= link_to 'New signature collection location', new_signature_collection_location_path %>
