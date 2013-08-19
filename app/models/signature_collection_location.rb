@@ -1,7 +1,7 @@
 class SignatureCollectionLocation < ActiveRecord::Base
-  attr_accessible :address1, :address2, :city, :latitude, :longitude,
-                  :name, :notes, :state, :zip, :phone, :venue_name,
-                  :ready, :venue_type, :active, :created_by_ip_address
+  attr_accessible :name, :phone, :venue_name, :address1, :address2, :city, :state, :zip, :notes,
+                  :venue_type,
+                  :ready, :active, :latitude, :longitude, :created_by_ip_address
 
   geocoded_by :address
   after_validation :geocode, :if => :address_changed?
