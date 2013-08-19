@@ -12,6 +12,8 @@ class LocationSearchesController < ApplicationController
     @location_search = LocationSearch.new(params[:location_search])
     respond_to do |format|
       if @signature_collection_locations = @location_search.find_by_address(@location_search.address)
+        gon.signature_collection_locations = @signature_collection_locations
+        gon.search_location = @location_search
         logger.debug @results.inspect
         #format.html { redirect_to @location_search, notice: 'Signature collection location was successfully created.' }
         format.html

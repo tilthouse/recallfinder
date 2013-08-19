@@ -15,26 +15,4 @@
 <% end %>
 
 <%= content_for :js_footer do %>
-      $(function() {
-          var centerLatLng = new google.maps.LatLng(<%= @location_search.coordinates[0] %>, <%= @location_search.coordinates[1] %>);
-          var mapOptions = {
-              center: centerLatLng,
-              zoom: 8,
-              mapTypeId: google.maps.MapTypeId.ROADMAP
-          };
-          var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-          var center_marker = new google.maps.Marker({
-            position: centerLatLng,
-            map: map,
-            title: 'Your search location'
-          });
-          <%- @signature_collection_locations.each_with_index do |signature_collection_location, i| -%>
-            var latLng_<%= i %> = new google.maps.LatLng(<%= signature_collection_location.latitude %>, <%= signature_collection_location.longitude %>);
-            var marker_<%= i %> = new google.maps.Marker({
-              position: latLng_<%= i %>,
-              map: map,
-              title: '<%= signature_collection_location.name %>'
-            });
-          <%- end -%>
-      });
 <%- end -%>

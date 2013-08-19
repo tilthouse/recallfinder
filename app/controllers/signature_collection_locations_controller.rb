@@ -33,9 +33,9 @@ class SignatureCollectionLocationsController < ApplicationController
   end
 
   # GET /signature_collection_locations/1/edit
-  def edit
-    @signature_collection_location = SignatureCollectionLocation.find(params[:id])
-  end
+  #def edit
+  #  @signature_collection_location = SignatureCollectionLocation.find(params[:id])
+  #end
 
   # POST /signature_collection_locations
   # POST /signature_collection_locations.json
@@ -53,31 +53,31 @@ class SignatureCollectionLocationsController < ApplicationController
     end
   end
 
-  # PUT /signature_collection_locations/1
-  # PUT /signature_collection_locations/1.json
-  def update
-    @signature_collection_location = SignatureCollectionLocation.find(params[:id])
-
-    respond_to do |format|
-      if @signature_collection_location.update_attributes(params[:signature_collection_location])
-        format.html { redirect_to @signature_collection_location, notice: 'Signature collection location was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @signature_collection_location.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /signature_collection_locations/1
-  # DELETE /signature_collection_locations/1.json
-  def destroy
-    @signature_collection_location = SignatureCollectionLocation.find(params[:id])
-    @signature_collection_location.destroy
-
-    respond_to do |format|
-      format.html { redirect_to signature_collection_locations_url }
-      format.json { head :no_content }
-    end
-  end
+  ## PUT /signature_collection_locations/1
+  ## PUT /signature_collection_locations/1.json
+  #def update
+  #  @signature_collection_location = SignatureCollectionLocation.find(params[:id])
+  #
+  #  respond_to do |format|
+  #    if @signature_collection_location.update_attributes(params[:signature_collection_location])
+  #      format.html { redirect_to @signature_collection_location, notice: 'Signature collection location was successfully updated.' }
+  #      format.json { head :no_content }
+  #    else
+  #      format.html { render action: "edit" }
+  #      format.json { render json: @signature_collection_location.errors, status: :unprocessable_entity }
+  #    end
+  #  end
+  #end
+  #
+  ## DELETE /signature_collection_locations/1
+  ## DELETE /signature_collection_locations/1.json
+  #def destroy
+  #  @signature_collection_location = SignatureCollectionLocation.find(params[:id])
+  #  @signature_collection_location.destroy
+  #
+  #  respond_to do |format|
+  #    format.html { redirect_to signature_collection_locations_url }
+  #    format.json { head :no_content }
+  #  end
+  #end
 end

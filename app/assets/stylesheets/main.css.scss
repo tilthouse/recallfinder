@@ -17,10 +17,8 @@ body {
   }
 
   #content {
-
-    width: 90%;
-    height: 90%;
     background-color: #ffffff;
+    margin: 20px;
     padding: 20px;
     @include rounded(20px);
 
