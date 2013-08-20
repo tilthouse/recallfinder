@@ -47,6 +47,31 @@ body {
     width: 960px;
 }
 
+label:after {
+  content: ": ";
+}
+
+label {
+  padding-right: 5px;
+}
+
+.hint, .error {
+  padding-left: 5px;
+  font-size: 10px;
+}
+
+.error {
+  font-weight: 900;
+}
+
+.input {
+  padding-bottom: 10px;
+}
+
+abbr[title], acronym[title] {
+  border-bottom-width: 0;
+}
+
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -107,4 +132,13 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+
+
+body #content form .checkbox_container label {
+    width: auto;
+}
+
+body #content form .checkbox_container label:after {
+    content: "";
 }
