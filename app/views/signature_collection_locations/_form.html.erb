@@ -19,7 +19,7 @@
   <%= f.input :city, :input_html => { :value => 'San Diego'} %>
   <%= f.input :state, :input_html => { :value => 'CA'} %>
   <%= f.input :zip, label: 'Zip Code' %>
-  <%= f.input :notes, label: 'Notes', input_html: { rows: 5, cols: 37 } %>
+  <%= f.input :notes, label: 'Notes', input_html: { rows: 5, cols: 37 }, hint: 'Hours of operation and related information.' %>
   <!--<%= f.input :venue_type %>-->
   <%= f.input :ready, label: 'I have petition forms and I have received training.', wrapper_html: { class: 'checkbox_container' } %>
 
