@@ -1,5 +1,29 @@
 <h1>Submit a Signature Collection Location</h1>
 
-<%= render 'form' %>
+<%= simple_form_for(@signature_collection_location) do |f| %>
+  <% if @signature_collection_location.errors.any? %>
+    <div id="error_explanation">
+    <h2><%= pluralize(@signature_collection_location.errors.count, "error") %> prohibited this signature_collection_location from being saved:</h2>
 
-<%= link_to 'Back', signature_collection_locations_path %>
+    <ul>
+    <% @signature_collection_location.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+    </div>
+    <% end %>
+
+  <%= f.input :name, hint: 'Your name' %>
+  <%= f.input :phone, hint: 'Your phone number, so we can contact you if necessary' %>
+  <%= f.input :venue_name, hint: 'The location\'s name' %>
+  <%= f.input :address1, label: 'Location Address' %>
+  <%= f.input :address2, label: 'Unit or Suite Number' %>
+  <%= f.input :city, :input_html => { :value => 'San Diego'} %>
+  <%= f.input :state, :input_html => { :value => 'CA'} %>
+  <%= f.input :zip, label: 'Zip Code' %>
+  <%= f.input :notes, label: 'Notes', input_html: { rows: 5, cols: 37 }, hint: 'Hours of operation and related information.' %>
+  <!--<%= f.input :venue_type %>-->
+  <%= f.input :ready, label: 'I have petition forms and I have received training.', wrapper_html: { class: 'checkbox_container' } %>
+
+  <%= f.submit value: 'Submit' %>
+<% end %>

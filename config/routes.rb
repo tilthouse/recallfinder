@@ -2,7 +2,7 @@ Recallfinder::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  resources :signature_collection_locations
+  resources :signature_collection_locations, :only => [:new, :create, :index]
   resources :location_searches
 
   # The priority is based upon order of creation:

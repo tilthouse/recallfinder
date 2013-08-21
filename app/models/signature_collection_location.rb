@@ -7,7 +7,8 @@ class SignatureCollectionLocation < ActiveRecord::Base
 
 
   validates_presence_of :name, :venue_name, :address1, :city, :state, :phone
-  validates_inclusion_of :venue_type, :in => VENUE_TYPES
+  validates_inclusion_of :venue_type, :in => VENUE_TYPES, :allow_nil => true
+
 
   geocoded_by :address
   after_validation :geocode, :if => :address_changed?

@@ -1,12 +1,12 @@
 class SignatureCollectionLocationsController < ApplicationController
   # GET /signature_collection_locations
   # GET /signature_collection_locations.json
-  def index
-    @signature_collection_locations = SignatureCollectionLocation.all
 
+  # used as "thanks" page
+  def index
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @signature_collection_locations }
+      #format.json { render json: @signature_collection_location }
     end
   end
 
@@ -41,7 +41,7 @@ class SignatureCollectionLocationsController < ApplicationController
 
     respond_to do |format|
       if @signature_collection_location.save
-        format.html { redirect_to @signature_collection_location, notice: 'Signature collection location was successfully created.' }
+        format.html { redirect_to signature_collection_locations_path, notice: 'Signature collection location was successfully created.' }
         format.json { render json: @signature_collection_location, status: :created, location: @signature_collection_location }
       else
         format.html { render action: "new" }
@@ -49,4 +49,6 @@ class SignatureCollectionLocationsController < ApplicationController
       end
     end
   end
+
+
 end
