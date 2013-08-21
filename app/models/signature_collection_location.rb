@@ -1,12 +1,16 @@
 class SignatureCollectionLocation < ActiveRecord::Base
+  VENUE_TYPES = %w( 'One Time' 'Regularly' )
+
   attr_accessible :name, :phone, :venue_name, :address1, :address2, :city, :state, :zip, :notes,
                   :venue_type,
                   :ready, :active, :latitude, :longitude, :created_by_ip_address
 
-  geocoded_by :address
-  after_validation :geocode, :if => :address_changed?
 
   validates_presence_of :name, :venue_name, :address1, :city, :state, :phone
+  validates_inclusion_of :venue_type, :in => VENUE_TYPES
+
+  geocoded_by :address
+  after_validation :geocode, :if => :address_changed?
 
   scope :displayable, -> { where(active: true, ready: true) }
 
